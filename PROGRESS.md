@@ -55,11 +55,20 @@
     - ✅ Users (for admin authentication)
 - ✅ TypeScript setup complete
 - ✅ Package.json with all dependencies
+- ✅ Dependencies installed
+- ✅ Environment variable examples created (.env.example)
 - ⏳ MongoDB setup needed (local or Atlas)
 - ⏳ Payload client integration in websites needed
-- ⏳ Environment variables setup needed
+- ⏳ Environment variables setup needed (create .env files from .env.example)
 
-### 5. Remaining Tasks
+### 5. Git Repository
+- ✅ Git repository initialized
+- ✅ Initial commit created
+- ✅ .gitignore file created
+- ✅ GitHub repository created (https://github.com/guillaume-flambard/moon-family)
+- ✅ Code pushed to GitHub
+
+### 6. Remaining Tasks
 - ⏳ Complete translations for Moon Spoon (all 6 languages)
 - ⏳ Complete translations for Moonland Bar (all 6 languages)
 - ⏳ SEO metadata and structured data
@@ -71,4 +80,5 @@
 - Moon Spoon needs npm/pnpm install to install dependencies (lucide-svelte, @inlang/paraglide-js)
 - Moonland Bar needs TailwindCSS installation
 - All sites need proper Inlang Paraglide generation (run paraglide build)
+- All projects need .env files created from .env.example files
 
