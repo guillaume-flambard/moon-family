@@ -1,0 +1,24 @@
+{
+  "name": "moon-family",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx nx run-many --target=dev --projects=mama-homemade-haadrin,moon-spoon-haadrin,moonland-haadrin --parallel=3",
+    "dev:mama": "cd mama-homemade-haadrin && pnpm dev",
+    "dev:spoon": "cd moon-spoon-haadrin && npm run dev",
+    "dev:bar": "cd moonland-haadrin && npm run dev",
+    "dev:cms": "cd cms && npm run dev",
+    "build": "npx nx run-many --target=build --projects=mama-homemade-haadrin,moon-spoon-haadrin,moonland-haadrin",
+    "build:mama": "cd mama-homemade-haadrin && pnpm build",
+    "build:spoon": "cd moon-spoon-haadrin && npm run build",
+    "build:bar": "cd moonland-haadrin && npm run build",
+    "build:cms": "cd cms && npm run build"
+  },
+  "devDependencies": {
+    "@nx/js": "22.0.2",
+    "@nx/workspace": "22.0.2",
+    "nx": "22.0.2"
+  }
+}
+

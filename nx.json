@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
+    "production": [
+      "default"
+    ],
+    "sharedGlobals": []
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
+    "dev": {
+      "cache": false
+    }
+  },
+  "projects": {
+    "mama-homemade-haadrin": "mama-homemade-haadrin",
+    "moon-spoon-haadrin": "moon-spoon-haadrin",
+    "moonland-haadrin": "moonland-haadrin"
+  }
+}
