@@ -1,7 +1,7 @@
 <script lang="ts">
 	import * as m from '$lib/paraglide/messages';
 	import { getLocale, setLocale, locales } from '$lib/paraglide/runtime';
-	import { ChevronDown, Menu, X } from 'lucide-svelte';
+	import { ChevronDown, Menu, X, UtensilsCrossed, Utensils } from 'lucide-svelte';
 
 	let { transparent = false } = $props();
 	let mobileMenuOpen = $state(false);
@@ -64,6 +64,38 @@
 					</a>
 				{/each}
 
+				<!-- Moon Family Links -->
+				<div
+					class="flex items-center space-x-3 border-r pr-6"
+					style="border-color: var(--black-tertiary);"
+				>
+					<span class="text-xs font-semibold opacity-80" style="color: white;"
+						>{m.moon_family()}:</span
+					>
+					<a
+						href="https://mamahomemade-haadrin.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="flex items-center space-x-1 rounded-lg px-3 py-1.5 text-sm font-medium transition-all hover:scale-105"
+						style="background: linear-gradient(135deg, var(--turquoise-dark), var(--violet-medium)); color: white; box-shadow: 0 2px 8px rgba(123, 44, 191, 0.3);"
+						title="Mama Homemade"
+					>
+						<UtensilsCrossed size={14} />
+						<span>Mama Homemade</span>
+					</a>
+					<a
+						href="https://moonspoon-haadrin.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="flex items-center space-x-1 rounded-lg px-3 py-1.5 text-sm font-medium transition-all hover:scale-105"
+						style="background: linear-gradient(135deg, var(--violet-medium), var(--turquoise-light)); color: white; box-shadow: 0 2px 8px rgba(123, 44, 191, 0.3);"
+						title="Moon Spoon"
+					>
+						<Utensils size={14} />
+						<span>Moon Spoon</span>
+					</a>
+				</div>
+
 				<!-- Language Switcher -->
 				<div class="language-dropdown relative">
 					<button
@@ -77,7 +109,10 @@
 						</span>
 					</button>
 					{#if languageDropdownOpen}
-						<div class="shadow-nightlife absolute right-0 mt-2 w-32 rounded-lg" style="background-color: var(--black-secondary);">
+						<div
+							class="shadow-nightlife absolute right-0 mt-2 w-32 rounded-lg"
+							style="background-color: var(--black-secondary);"
+						>
 							{#each locales as lang}
 								<button
 									onclick={() => switchLanguage(lang)}
@@ -122,6 +157,33 @@
 					</a>
 				{/each}
 
+				<!-- Mobile Moon Family Links -->
+				<div class="border-t pt-2" style="border-color: var(--black-tertiary);">
+					<p class="px-3 text-sm font-semibold" style="color: white;">{m.moon_family()}</p>
+					<div class="mt-2 space-y-1">
+						<a
+							href="https://mamahomemade-haadrin.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center space-x-2 rounded-lg px-3 py-2 transition-colors hover:bg-black-tertiary"
+							style="color: white;"
+						>
+							<UtensilsCrossed size={16} />
+							<span>Mama Homemade</span>
+						</a>
+						<a
+							href="https://moonspoon-haadrin.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center space-x-2 rounded-lg px-3 py-2 transition-colors hover:bg-black-tertiary"
+							style="color: white;"
+						>
+							<Utensils size={16} />
+							<span>Moon Spoon</span>
+						</a>
+					</div>
+				</div>
+
 				<!-- Mobile Language Switcher -->
 				<div class="border-t pt-2" style="border-color: var(--black-tertiary);">
 					<p class="px-3 text-sm font-semibold" style="color: white;">Language</p>
@@ -142,4 +204,3 @@
 		</div>
 	{/if}
 </nav>
-

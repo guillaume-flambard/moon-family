@@ -3,11 +3,14 @@
 </script>
 
 <section
-	class="py-20 glass-sunset"
+	class="glass-sunset py-20"
 	style="background: linear-gradient(135deg, var(--blue-dark) 0%, var(--sunset-primary) 100%);"
 >
 	<div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-		<h1 class="mb-6 text-5xl font-extrabold font-serif tracking-tight md:text-6xl" style="color: #ffffff !important;">
+		<h1
+			class="mb-6 font-serif text-5xl font-extrabold tracking-tight md:text-6xl"
+			style="color: #ffffff !important;"
+		>
 			{title}
 		</h1>
 		{#if subtitle}
@@ -17,4 +20,3 @@
 		{/if}
 	</div>
 </section>
-

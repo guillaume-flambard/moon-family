@@ -5,26 +5,29 @@
 
 	let selectedImage = $state<number | null>(null);
 
-	const galleryImages = $derived([
+	const galleryImages = [
 		{
 			category: 'Bar',
-			image: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&h=600&fit=crop&q=80',
+			image:
+				'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&h=600&fit=crop&q=80',
 			title: 'Beach Bar',
 			description: 'Moonland Bar at night'
 		},
 		{
 			category: 'Events',
-			image: 'https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=800&h=600&fit=crop&q=80',
+			image:
+				'https://images.unsplash.com/photo-1572116469696-31de0f17cc34?w=800&h=600&fit=crop&q=80',
 			title: 'Live Music',
 			description: 'Live performance at Moonland Bar'
 		},
 		{
 			category: 'Bar',
-			image: 'https://images.unsplash.com/photo-1571875257727-256c39da42af?w=800&h=600&fit=crop&q=80',
+			image:
+				'https://images.unsplash.com/photo-1571875257727-256c39da42af?w=800&h=600&fit=crop&q=80',
 			title: 'Cocktails',
 			description: 'Handcrafted cocktails'
 		}
-	]);
+	];
 </script>
 
 <svelte:head>
@@ -68,8 +71,7 @@
 			src={galleryImages[selectedImage].image}
 			alt={galleryImages[selectedImage].title}
 			class="max-h-full max-w-full rounded-lg"
-			onclick|stopPropagation
+			onclick={(e) => e.stopPropagation()}
 		/>
 	</div>
 {/if}
-

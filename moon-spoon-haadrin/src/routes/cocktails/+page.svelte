@@ -1,7 +1,7 @@
 <script lang="ts">
 	import * as m from '$lib/paraglide/messages';
 	import PageHeader from '$lib/components/PageHeader.svelte';
-	import { Cocktail, Sunset } from 'lucide-svelte';
+	import { Wine, Sunset } from 'lucide-svelte';
 	import { scrollReveal } from '$lib/utils/scroll-reveal';
 </script>
 
@@ -16,7 +16,7 @@
 		<div class="mb-12 text-center" use:scrollReveal={{ delay: 0 }}>
 			<div class="mb-6 inline-flex items-center gap-2">
 				<Sunset size={32} style="color: var(--sunset-primary);" />
-				<Cocktail size={32} style="color: var(--sunset-primary);" />
+				<Wine size={32} style="color: var(--sunset-primary);" />
 			</div>
 			<p class="text-lg" style="color: var(--text-secondary);">
 				Handcrafted cocktails menu coming soon. Perfect for sunset dining.
@@ -26,11 +26,10 @@
 		<div class="text-center">
 			<a
 				href="/reservations"
-				class="inline-block rounded-full px-8 py-4 font-semibold text-white shadow-lg transition-all hover:scale-105 gradient-sunset"
+				class="gradient-sunset inline-block rounded-full px-8 py-4 font-semibold text-white shadow-lg transition-all hover:scale-105"
 			>
 				{m.book_table()}
 			</a>
 		</div>
 	</div>
 </section>
-

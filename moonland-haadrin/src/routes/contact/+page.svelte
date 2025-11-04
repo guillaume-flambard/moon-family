@@ -18,7 +18,9 @@
 			<!-- Contact Details -->
 			<div>
 				<div class="rounded-2xl shadow-nightlife p-8 glass-nightlife">
-					<h2 class="mb-8 text-3xl font-bold font-serif" style="color: white;">{m.get_directions()}</h2>
+					<h2 class="mb-8 text-3xl font-bold font-serif" style="color: white;">
+						{m.get_directions()}
+					</h2>
 
 					<!-- Address -->
 					<div class="mb-6 flex items-start space-x-4">
@@ -76,6 +78,7 @@
 								href="https://facebook.com"
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label="Facebook"
 								class="flex h-10 w-10 items-center justify-center rounded-full text-white transition-all hover:scale-110 gradient-violet"
 							>
 								<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -88,6 +91,7 @@
 								href="https://instagram.com"
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label="Instagram"
 								class="flex h-10 w-10 items-center justify-center rounded-full text-white transition-all hover:scale-110 gradient-turquoise"
 							>
 								<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -108,7 +112,7 @@
 					width="100%"
 					height="100%"
 					style="border:0;"
-					allowfullscreen=""
+					allowfullscreen
 					loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade"
 					title="Moonland Bar Location"
@@ -117,4 +121,3 @@
 		</div>
 	</div>
 </section>
-

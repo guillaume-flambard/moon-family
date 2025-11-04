@@ -3,7 +3,7 @@
 	import PageHeader from '$lib/components/PageHeader.svelte';
 
 	const mapEmbedUrl =
-		'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.958267788679!2d100.0618504!3d9.6798194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3054fd4a2592b285%3A0xff799655f839b76f!2sMama%20Homemade%20Restaurant!5e0!3m2!1sen!2s!4v1735800000000!5m2!1sen!2s';
+		'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.958267788679!2d100.067061!3d9.6767761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3054fdf775167c59%3A0x631a526817ca704f!2sMoonSpoon%20Restaurant!5e0!3m2!1sen!2s!4v1735800000000!5m2!1sen!2s';
 </script>
 
 <svelte:head>
@@ -17,8 +17,10 @@
 		<div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
 			<!-- Contact Details -->
 			<div>
-				<div class="rounded-2xl shadow-xl p-8 glass-sunset">
-					<h2 class="mb-8 text-3xl font-bold font-serif" style="color: var(--blue-dark);">{m.get_directions()}</h2>
+				<div class="glass-sunset rounded-2xl p-8 shadow-xl">
+					<h2 class="mb-8 font-serif text-3xl font-bold" style="color: var(--blue-dark);">
+						{m.get_directions()}
+					</h2>
 
 					<!-- Address -->
 					<div class="mb-6 flex items-start space-x-4">
@@ -42,16 +44,35 @@
 							</svg>
 						</div>
 						<div>
-							<h3 class="mb-1 font-semibold" style="color: var(--blue-dark);">{m.contact_address()}</h3>
+							<h3 class="mb-1 font-semibold" style="color: var(--blue-dark);">
+								{m.contact_address()}
+							</h3>
 							<p style="color: var(--text-secondary);">Haad Rin, Koh Phangan</p>
 							<p style="color: var(--text-secondary);">Surat Thani, Thailand 84280</p>
+							<a
+								href="https://www.google.com/maps/place/MoonSpoon+Restaurant/@9.6767814,100.0644861,17z/data=!3m1!4b1!4m6!3m5!1s0x3054fdf775167c59:0x631a526817ca704f!8m2!3d9.6767761!4d100.067061!16s%2Fg%2F11xg5t5kgc?entry=ttu"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="mt-2 inline-flex items-center gap-2 text-sm font-semibold transition-colors hover:opacity-80"
+								style="color: var(--sunset-primary);"
+							>
+								{m.get_directions()}
+								<svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+									/>
+								</svg>
+							</a>
 						</div>
 					</div>
 
 					<!-- Hours -->
 					<div class="mb-6 flex items-start space-x-4">
 						<div
-							class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full gradient-sunset"
+							class="gradient-sunset flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full"
 						>
 							<svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path
@@ -63,7 +84,9 @@
 							</svg>
 						</div>
 						<div>
-							<h3 class="mb-1 font-semibold" style="color: var(--blue-dark);">{m.contact_hours()}</h3>
+							<h3 class="mb-1 font-semibold" style="color: var(--blue-dark);">
+								{m.contact_hours()}
+							</h3>
 							<p style="color: var(--text-secondary);">{m.hours_daily()}</p>
 							<p class="text-sm" style="color: var(--sunset-primary);">{m.hours_sunset()}</p>
 						</div>
@@ -77,6 +100,7 @@
 								href="https://facebook.com"
 								target="_blank"
 								rel="noopener noreferrer"
+								aria-label="Facebook"
 								class="flex h-10 w-10 items-center justify-center rounded-full text-white transition-all hover:scale-110"
 								style="background-color: var(--blue-medium);"
 							>
@@ -90,7 +114,8 @@
 								href="https://instagram.com"
 								target="_blank"
 								rel="noopener noreferrer"
-								class="flex h-10 w-10 items-center justify-center rounded-full text-white transition-all hover:scale-110 gradient-sunset"
+								aria-label="Instagram"
+								class="gradient-sunset flex h-10 w-10 items-center justify-center rounded-full text-white transition-all hover:scale-110"
 							>
 								<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
 									<path
@@ -110,7 +135,7 @@
 					width="100%"
 					height="100%"
 					style="border:0;"
-					allowfullscreen=""
+					allowfullscreen
 					loading="lazy"
 					referrerpolicy="no-referrer-when-downgrade"
 					title="Moon Spoon Location"
@@ -119,4 +144,3 @@
 		</div>
 	</div>
 </section>
-

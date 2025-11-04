@@ -21,7 +21,9 @@
 			loading="eager"
 		/>
 		<!-- Dark Nightlife Gradient Overlay -->
-		<div class="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/95 via-[#7b2cbf]/80 to-[#0d7377]/90"></div>
+		<div
+			class="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/95 via-[#7b2cbf]/80 to-[#0d7377]/90"
+		></div>
 	</div>
 
 	<!-- Hero Content -->
@@ -49,12 +51,20 @@
 				</h1>
 
 				<!-- Subtitle -->
-				<p class="text-display mb-6 font-semibold" style="color: rgba(255, 255, 255, 0.95) !important;" use:scrollReveal={{ delay: 150 }}>
+				<p
+					class="text-display mb-6 font-semibold"
+					style="color: rgba(255, 255, 255, 0.95) !important;"
+					use:scrollReveal={{ delay: 150 }}
+				>
 					{m.hero_subtitle()}
 				</p>
 
 				<!-- Tagline -->
-				<p class="mx-auto mb-8 max-w-2xl text-2xl font-script leading-relaxed" style="color: rgba(255, 255, 255, 0.95) !important;" use:scrollReveal={{ delay: 300 }}>
+				<p
+					class="mx-auto mb-8 max-w-2xl text-2xl font-script leading-relaxed"
+					style="color: rgba(255, 255, 255, 0.95) !important;"
+					use:scrollReveal={{ delay: 300 }}
+				>
 					{m.hero_tagline()}
 				</p>
 
@@ -118,13 +128,14 @@
 			<!-- About Content -->
 			<div class="flex flex-col justify-center" use:scrollReveal={{ delay: 0, origin: 'left' }}>
 				<div class="mb-4 inline-block">
-					<span
-						class="rounded-full px-4 py-2 text-sm font-semibold gradient-nightlife text-white"
-					>
+					<span class="rounded-full px-4 py-2 text-sm font-semibold gradient-nightlife text-white">
 						About
 					</span>
 				</div>
-				<h2 class="mb-8 text-5xl font-extrabold font-serif tracking-tight md:text-6xl" style="color: var(--black-primary);">
+				<h2
+					class="mb-8 text-5xl font-extrabold font-serif tracking-tight md:text-6xl"
+					style="color: var(--black-primary);"
+				>
 					{m.about_title()}
 				</h2>
 				<p class="mb-8 text-xl leading-relaxed" style="color: var(--text-secondary);">
@@ -167,7 +178,10 @@
 <section class="relative overflow-hidden py-24 gradient-nightlife">
 	<div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
 		<div class="mb-12" use:scrollReveal={{ delay: 0 }}>
-			<h2 class="mb-6 text-5xl font-extrabold font-serif tracking-tight md:text-6xl" style="color: white;">
+			<h2
+				class="mb-6 text-5xl font-extrabold font-serif tracking-tight md:text-6xl"
+				style="color: white;"
+			>
 				{m.events_title()}
 			</h2>
 			<p class="text-xl leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">

@@ -19,14 +19,17 @@
 				<Music size={32} style="color: var(--turquoise-medium);" />
 			</div>
 			<p class="text-lg" style="color: var(--text-secondary);">
-				Upcoming events calendar coming soon. Check back regularly for live music, DJ sets, and special events.
+				Upcoming events calendar coming soon. Check back regularly for live music, DJ sets, and
+				special events.
 			</p>
 		</div>
 
 		<div class="rounded-2xl shadow-nightlife p-8 glass-nightlife" use:scrollReveal={{ delay: 200 }}>
 			<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 				<div class="flex items-start gap-4">
-					<div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full gradient-violet">
+					<div
+						class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full gradient-violet"
+					>
 						<Clock size={24} style="color: white;" />
 					</div>
 					<div>
@@ -36,7 +39,9 @@
 					</div>
 				</div>
 				<div class="flex items-start gap-4">
-					<div class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full gradient-turquoise">
+					<div
+						class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full gradient-turquoise"
+					>
 						<Music size={24} style="color: white;" />
 					</div>
 					<div>
@@ -57,4 +62,3 @@
 		</div>
 	</div>
 </section>
-

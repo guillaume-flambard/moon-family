@@ -1,7 +1,7 @@
 <script lang="ts">
 	import * as m from '$lib/paraglide/messages';
 	import { getLocale, setLocale, locales } from '$lib/paraglide/runtime';
-	import { ChevronDown, Menu, X } from 'lucide-svelte';
+	import { ChevronDown, Menu, X, UtensilsCrossed, Music } from 'lucide-svelte';
 
 	let { transparent = false } = $props();
 	let mobileMenuOpen = $state(false);
@@ -49,7 +49,9 @@
 		<div class="flex h-16 items-center justify-between md:h-20">
 			<!-- Logo -->
 			<a href="/" class="flex items-center">
-				<span class="text-2xl font-bold font-serif" style="color: var(--blue-dark);">Moon Spoon</span>
+				<span class="font-serif text-2xl font-bold" style="color: var(--blue-dark);"
+					>Moon Spoon</span
+				>
 			</a>
 
 			<!-- Desktop Navigation -->
@@ -63,6 +65,35 @@
 						{link.label()}
 					</a>
 				{/each}
+
+				<!-- Moon Family Links -->
+				<div class="flex items-center space-x-3 border-r border-gray-200 pr-6">
+					<span class="text-xs font-semibold opacity-80" style="color: var(--text-primary);"
+						>{m.moon_family()}:</span
+					>
+					<a
+						href="https://mamahomemade-haadrin.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="flex items-center space-x-1 rounded-lg px-3 py-1.5 text-sm font-medium transition-all hover:scale-105"
+						style="background: linear-gradient(135deg, var(--blue-dark), var(--sunset-primary)); color: white; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.2);"
+						title="Mama Homemade"
+					>
+						<UtensilsCrossed size={14} />
+						<span>Mama Homemade</span>
+					</a>
+					<a
+						href="https://moonlandbar-haadrin.com"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="flex items-center space-x-1 rounded-lg px-3 py-1.5 text-sm font-medium transition-all hover:scale-105"
+						style="background: linear-gradient(135deg, var(--sunset-primary), var(--ocean-blue)); color: white; box-shadow: 0 2px 8px rgba(30, 58, 95, 0.2);"
+						title="Moonland Bar"
+					>
+						<Music size={14} />
+						<span>Moonland Bar</span>
+					</a>
+				</div>
 
 				<!-- Language Switcher -->
 				<div class="language-dropdown relative">
@@ -122,6 +153,35 @@
 					</a>
 				{/each}
 
+				<!-- Mobile Moon Family Links -->
+				<div class="border-t border-gray-200 pt-2">
+					<p class="px-3 text-sm font-semibold" style="color: var(--text-primary);">
+						{m.moon_family()}
+					</p>
+					<div class="mt-2 space-y-1">
+						<a
+							href="https://mamahomemade-haadrin.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center space-x-2 rounded-lg px-3 py-2 transition-colors hover:bg-gray-100"
+							style="color: var(--text-primary);"
+						>
+							<UtensilsCrossed size={16} />
+							<span>Mama Homemade</span>
+						</a>
+						<a
+							href="https://moonlandbar-haadrin.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="flex items-center space-x-2 rounded-lg px-3 py-2 transition-colors hover:bg-gray-100"
+							style="color: var(--text-primary);"
+						>
+							<Music size={16} />
+							<span>Moonland Bar</span>
+						</a>
+					</div>
+				</div>
+
 				<!-- Mobile Language Switcher -->
 				<div class="border-t border-gray-200 pt-2">
 					<p class="px-3 text-sm font-semibold" style="color: var(--text-primary);">Language</p>
@@ -142,4 +202,3 @@
 		</div>
 	{/if}
 </nav>
-

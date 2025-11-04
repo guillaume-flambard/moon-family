@@ -11,4 +11,3 @@ const handleParaglide: Handle = ({ event, resolve }) =>
 	});
 
 export const handle: Handle = handleParaglide;
-

@@ -7,28 +7,52 @@
 		<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
 			<!-- About -->
 			<div>
-				<h3 class="mb-4 text-2xl font-bold font-serif" style="color: var(--turquoise-light);">Moonland Bar</h3>
+				<h3 class="mb-4 text-2xl font-bold font-serif" style="color: var(--turquoise-light);">
+					Moonland Bar
+				</h3>
 				<p style="color: rgba(255, 255, 255, 0.9);">{m.about_text()}</p>
 			</div>
 
 			<!-- Quick Links -->
 			<div>
-				<h4 class="mb-4 text-lg font-semibold" style="color: var(--turquoise-light);">{m.quick_links()}</h4>
+				<h4 class="mb-4 text-lg font-semibold" style="color: var(--turquoise-light);">
+					{m.quick_links()}
+				</h4>
 				<ul class="space-y-2">
 					<li>
-						<a href="/" class="transition-colors hover:opacity-80" style="color: rgba(255, 255, 255, 0.9);">{m.nav_home()}</a>
+						<a
+							href="/"
+							class="transition-colors hover:opacity-80"
+							style="color: rgba(255, 255, 255, 0.9);">{m.nav_home()}</a
+						>
 					</li>
 					<li>
-						<a href="/events" class="transition-colors hover:opacity-80" style="color: rgba(255, 255, 255, 0.9);">{m.nav_events()}</a>
+						<a
+							href="/events"
+							class="transition-colors hover:opacity-80"
+							style="color: rgba(255, 255, 255, 0.9);">{m.nav_events()}</a
+						>
 					</li>
 					<li>
-						<a href="/gallery" class="transition-colors hover:opacity-80" style="color: rgba(255, 255, 255, 0.9);">{m.nav_gallery()}</a>
+						<a
+							href="/gallery"
+							class="transition-colors hover:opacity-80"
+							style="color: rgba(255, 255, 255, 0.9);">{m.nav_gallery()}</a
+						>
 					</li>
 					<li>
-						<a href="/bookings" class="transition-colors hover:opacity-80" style="color: rgba(255, 255, 255, 0.9);">{m.nav_bookings()}</a>
+						<a
+							href="/bookings"
+							class="transition-colors hover:opacity-80"
+							style="color: rgba(255, 255, 255, 0.9);">{m.nav_bookings()}</a
+						>
 					</li>
 					<li>
-						<a href="/contact" class="transition-colors hover:opacity-80" style="color: rgba(255, 255, 255, 0.9);">{m.nav_contact()}</a>
+						<a
+							href="/contact"
+							class="transition-colors hover:opacity-80"
+							style="color: rgba(255, 255, 255, 0.9);">{m.nav_contact()}</a
+						>
 					</li>
 				</ul>
 			</div>
@@ -42,13 +66,41 @@
 					<p>{m.footer_location()}</p>
 					<p>{m.hours_daily()}</p>
 				</div>
+				<!-- Moon Family Links -->
+				<div class="mt-6">
+					<h4 class="mb-3 text-sm font-semibold" style="color: var(--turquoise-light);">
+						Moon Family
+					</h4>
+					<ul class="space-y-1.5 text-sm">
+						<li>
+							<a
+								href="https://mamahomemade-haadrin.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="transition-colors hover:opacity-80"
+								style="color: rgba(255, 255, 255, 0.9);">Mama Homemade</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://moonspoon-haadrin.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="transition-colors hover:opacity-80"
+								style="color: rgba(255, 255, 255, 0.9);">Moon Spoon</a
+							>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 
-		<div class="mt-8 border-t pt-8 text-center" style="border-color: rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.7);">
+		<div
+			class="mt-8 border-t pt-8 text-center"
+			style="border-color: rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.7);"
+		>
 			<p>&copy; {new Date().getFullYear()} Moonland Bar. {m.footer_rights()}</p>
 			<p class="mt-2 text-sm" style="color: rgba(255, 255, 255, 0.9);">{m.footer_moon_family()}</p>
 		</div>
 	</div>
 </footer>
-

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as m from '$lib/paraglide/messages';
-	import { Sunset, UtensilsCrossed, Cocktail } from 'lucide-svelte';
+	import { Sunset, UtensilsCrossed, Wine } from 'lucide-svelte';
 	import { scrollReveal } from '$lib/utils/scroll-reveal';
 
 	let scrollY = $state(0);
@@ -21,7 +21,9 @@
 			loading="eager"
 		/>
 		<!-- Sunset Gradient Overlay -->
-		<div class="absolute inset-0 bg-gradient-to-b from-[#1e3a5f]/90 via-[#2d4f7c]/80 to-[#ff6b35]/90"></div>
+		<div
+			class="absolute inset-0 bg-gradient-to-b from-[#1e3a5f]/90 via-[#2d4f7c]/80 to-[#ff6b35]/90"
+		></div>
 	</div>
 
 	<!-- Hero Content -->
@@ -31,7 +33,7 @@
 				<!-- Location Badge -->
 				<div class="mb-6 inline-flex items-center space-x-2">
 					<span
-						class="inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold shadow-lg glass-sunset"
+						class="glass-sunset inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold shadow-lg"
 						style="color: white;"
 					>
 						<Sunset size={16} />
@@ -49,12 +51,20 @@
 				</h1>
 
 				<!-- Subtitle -->
-				<p class="text-display mb-6 font-semibold" style="color: rgba(255, 255, 255, 0.95) !important;" use:scrollReveal={{ delay: 150 }}>
+				<p
+					class="text-display mb-6 font-semibold"
+					style="color: rgba(255, 255, 255, 0.95) !important;"
+					use:scrollReveal={{ delay: 150 }}
+				>
 					{m.hero_subtitle()}
 				</p>
 
 				<!-- Tagline -->
-				<p class="mx-auto mb-8 max-w-2xl text-2xl font-script leading-relaxed" style="color: rgba(255, 255, 255, 0.95) !important;" use:scrollReveal={{ delay: 300 }}>
+				<p
+					class="font-script mx-auto mb-8 max-w-2xl text-2xl leading-relaxed"
+					style="color: rgba(255, 255, 255, 0.95) !important;"
+					use:scrollReveal={{ delay: 300 }}
+				>
 					{m.hero_tagline()}
 				</p>
 
@@ -62,7 +72,7 @@
 				<div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
 					<a
 						href="/menu"
-						class="hover-lift relative overflow-hidden rounded-full px-10 py-4 text-lg font-bold text-white shadow-lg transition-all hover:scale-105 gradient-sunset"
+						class="hover-lift gradient-sunset relative overflow-hidden rounded-full px-10 py-4 text-lg font-bold text-white shadow-lg transition-all hover:scale-105"
 					>
 						<span class="relative z-10">{m.hero_cta()}</span>
 					</a>
@@ -89,7 +99,7 @@
 						<span>Sunset Dining</span>
 					</div>
 					<div class="flex items-center gap-2">
-						<Cocktail style="color: var(--sand-gold) !important;" size={24} />
+						<Wine style="color: var(--sand-gold) !important;" size={24} />
 						<span>Handcrafted Cocktails</span>
 					</div>
 				</div>
@@ -118,13 +128,14 @@
 			<!-- About Content -->
 			<div class="flex flex-col justify-center" use:scrollReveal={{ delay: 0, origin: 'left' }}>
 				<div class="mb-4 inline-block">
-					<span
-						class="rounded-full px-4 py-2 text-sm font-semibold gradient-sunset text-white"
-					>
+					<span class="gradient-sunset rounded-full px-4 py-2 text-sm font-semibold text-white">
 						About
 					</span>
 				</div>
-				<h2 class="mb-8 text-5xl font-extrabold font-serif tracking-tight md:text-6xl" style="color: var(--blue-dark);">
+				<h2
+					class="mb-8 font-serif text-5xl font-extrabold tracking-tight md:text-6xl"
+					style="color: var(--blue-dark);"
+				>
 					{m.about_title()}
 				</h2>
 				<p class="mb-8 text-xl leading-relaxed" style="color: var(--text-secondary);">
@@ -132,7 +143,7 @@
 				</p>
 				<a
 					href="/contact"
-					class="inline-block rounded-full px-8 py-4 font-semibold text-white shadow-lg transition-all hover:scale-105 gradient-ocean-sunset"
+					class="gradient-ocean-sunset inline-block rounded-full px-8 py-4 font-semibold text-white shadow-lg transition-all hover:scale-105"
 				>
 					{m.get_directions()}
 				</a>
@@ -164,10 +175,16 @@
 </section>
 
 <!-- Featured Section -->
-<section class="relative overflow-hidden py-24" style="background: linear-gradient(135deg, var(--blue-dark) 0%, var(--sunset-primary) 100%);">
+<section
+	class="relative overflow-hidden py-24"
+	style="background: linear-gradient(135deg, var(--blue-dark) 0%, var(--sunset-primary) 100%);"
+>
 	<div class="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
 		<div class="mb-12" use:scrollReveal={{ delay: 0 }}>
-			<h2 class="mb-6 text-5xl font-extrabold font-serif tracking-tight md:text-6xl" style="color: white;">
+			<h2
+				class="mb-6 font-serif text-5xl font-extrabold tracking-tight md:text-6xl"
+				style="color: white;"
+			>
 				{m.menu_title()}
 			</h2>
 			<p class="text-xl leading-relaxed" style="color: rgba(255, 255, 255, 0.9);">

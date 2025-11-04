@@ -22,6 +22,11 @@
 	--sunset-light: #ffb38a;
 	--sunset-pink: #ff9a8b;
 
+	/* Ocean Blue for Fusion Theme */
+	--ocean-blue: #4a7ab8;
+	--ocean-blue-light: #6b9bd1;
+	--ocean-blue-dark: #2d4f7c;
+
 	/* Neutral Base */
 	--white: #ffffff;
 	--cream: #faf8f5;
@@ -40,7 +45,11 @@
 
 /* Typography */
 body {
-	font-family: 'Inter', system-ui, -apple-system, sans-serif;
+	font-family:
+		'Inter',
+		system-ui,
+		-apple-system,
+		sans-serif;
 	background-color: var(--bg-primary);
 	color: var(--text-primary);
 	-webkit-font-smoothing: antialiased;
@@ -59,7 +68,8 @@ body {
 }
 
 /* Enhanced Typography Hierarchy */
-h1, .h1 {
+h1,
+.h1 {
 	font-size: clamp(2.5rem, 5vw, 4.5rem);
 	font-weight: 800;
 	line-height: 1.1;
@@ -67,7 +77,8 @@ h1, .h1 {
 	margin-bottom: 1rem;
 }
 
-h2, .h2 {
+h2,
+.h2 {
 	font-size: clamp(2rem, 4vw, 3.5rem);
 	font-weight: 700;
 	line-height: 1.2;
@@ -75,7 +86,8 @@ h2, .h2 {
 	margin-bottom: 0.875rem;
 }
 
-h3, .h3 {
+h3,
+.h3 {
 	font-size: clamp(1.5rem, 3vw, 2.25rem);
 	font-weight: 700;
 	line-height: 1.3;
@@ -154,4 +166,36 @@ html {
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
 	border: 1px solid rgba(255, 107, 53, 0.1);
+}
+
+/* Button Styles - Fusion Modern */
+.btn-fusion {
+	background: linear-gradient(135deg, var(--blue-dark), var(--sunset-primary));
+	color: white;
+	border-radius: 12px;
+	padding: 0.75rem 1.5rem;
+	font-weight: 600;
+	transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+	box-shadow: 0 4px 12px rgba(30, 58, 95, 0.2);
+}
+
+.btn-fusion:hover {
+	transform: translateY(-2px) scale(1.02);
+	box-shadow: 0 8px 24px rgba(255, 107, 53, 0.25);
+	background: linear-gradient(135deg, var(--sunset-primary), var(--sunset-medium));
+}
+
+/* Animation - Sunset Glow */
+@keyframes sunset-glow {
+	0%,
+	100% {
+		box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+	}
+	50% {
+		box-shadow: 0 0 40px rgba(255, 107, 53, 0.6);
+	}
+}
+
+.animate-sunset-glow {
+	animation: sunset-glow 3s ease-in-out infinite;
 }

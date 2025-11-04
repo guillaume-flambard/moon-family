@@ -17,8 +17,47 @@
 	/>
 	<meta
 		name="description"
-		content="Moonland Bar - Beach Bar, Music & Nightlife in Haad Rin, Koh Phangan"
+		content="Moonland Bar - Beach Bar, Music & Nightlife in Haad Rin, Koh Phangan. Live music, DJ sets, beach vibes, and unforgettable nights. The heart of Haad Rin's nightlife scene."
 	/>
+	<meta
+		name="keywords"
+		content="beach bar, Koh Phangan, Haad Rin, nightlife, live music, DJ, Moonland Bar"
+	/>
+	<meta name="author" content="Moonland Bar" />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Moonland Bar - Beach Bar, Music & Nightlife" />
+	<meta
+		property="og:description"
+		content="Beach bar, music & nightlife in Haad Rin, Koh Phangan. Live music, DJ sets, beach vibes, and unforgettable nights."
+	/>
+	<meta property="og:site_name" content="Moonland Bar" />
+
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Moonland Bar - Beach Bar, Music & Nightlife" />
+	<meta
+		name="twitter:description"
+		content="Beach bar, music & nightlife in Haad Rin, Koh Phangan. Live music, DJ sets, beach vibes, and unforgettable nights."
+	/>
+
+	<!-- Structured Data -->
+	{@html `<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BarOrPub",
+		"name": "Moonland Bar",
+		"description": "Beach bar, music & nightlife in Haad Rin, Koh Phangan. Live music, DJ sets, beach vibes, and unforgettable nights.",
+		"address": {
+			"@type": "PostalAddress",
+			"addressLocality": "Haad Rin",
+			"addressRegion": "Koh Phangan",
+			"addressCountry": "TH"
+		},
+		"openingHours": "Mo-Su 18:00-02:00"
+	}
+	</script>`}
 </svelte:head>
 
 <div class="flex min-h-screen flex-col">
